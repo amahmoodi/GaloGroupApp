@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    @* <div class="navbar navbar-inverse navbar-fixed-top">*@
+    <div class="navbar navbar-inverse navbar-fixed-top " style=" background-image: url('../../../../Content/Pic/Inked24920_LI3.jpg');
+              background-repeat: no-repeat;
+              background-size: cover ">
+        <div class="container">
+            <div class="navbar-header " >
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("گروه گالو", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <img src="~/Content/Pic/77-3.jpg" />
+            </div>
+            <div class="navbar-collapse collapse " >
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("ارتباط با ما", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("درباره", "About", "Home")</li>
+                    <li>@Html.ActionLink("فروشگاه", "Index", "Home")</li>
+                    <li>@Html.ActionLink("آموزش", "Index", "Home")</li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">خدمات </a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li>
+                                    @Html.ActionLink("طراحی ایده تا اجرا", "Index", "Home")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("راه اندازی خط تولید", "Index", "Home")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("آموزش نیروی انسانی خط تولید", "Index", "Home")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("راه اندازی واحد مهندسی محصول", "Index", "Home")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("راه اندازی و آموزش خط کنترل کیفیت", "Index", "Home")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("راه اندازی آزمایشگاه چرم و کفش", "Index", "Home")
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>@Html.ActionLink("خانه", "Index", "Home")</li>
+                </ul>
+                <ul class="navbar-left">
+
+                    @Html.Partial("_LoginPartial")
+                </ul>
+            </div>
+        </div>
+    </div>
+    @* ////////////////////////////////////////////////////// *@
+
+    @* ///////////////////////////////////////////////////////// *@
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

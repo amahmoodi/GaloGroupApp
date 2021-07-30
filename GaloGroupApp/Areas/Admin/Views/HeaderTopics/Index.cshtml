@@ -1,0 +1,43 @@
+﻿@model IEnumerable<GaloGroup.Domain.DBModel.HeaderTopic>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink(" Create New", "Create", new { }, new { @class= "glyphicon glyphicon-plus-sign" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TrainingCourseId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeadingTopic)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrainingCourseId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeadingTopic)
+            </td>
+            <td>
+                @Html.ActionLink(" Edit", "Edit", new { id = item.id }, new { @class = "glyphicon glyphicon-check" }) |
+                @Html.ActionLink(" Details", "Details", new { id = item.id }, new { @class = "glyphicon glyphicon-list-alt" }) |
+                @Html.ActionLink(" Delete", "Delete", new { id = item.id },
+                new { @class = "glyphicon glyphicon-trash", onclick = "return confirm('Are you sure you want to remove " 
+                + @item.HeadingTopic + " to list ?');" })  
+            </td>
+        </tr>
+    }
+
+</table>

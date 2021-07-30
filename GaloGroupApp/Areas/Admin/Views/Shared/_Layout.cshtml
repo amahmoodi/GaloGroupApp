@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background-image:url('../../../../Content/Pic/77-2.jpg')">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" style="        height: 100px;
+ 
+        background-image: url('../../../../Content/Pic/Inked24920_LI3.jpg');
+        background-repeat: no-repeat;
+        background-size: cover
+">
+        @*   <div class="navbar navbar-inverse navbar-fixed-top">*@
+        <div class="container">
+            <div class="navbar-header navbar-left">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("گالو گروپ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <img src="~/Content/Pic/77-3.jpg" />
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center" style="margin-top:50px;">
+        <div class="row content">
+            <div class="container col-sm-10 bg-danger" style="margin-top:10px">
+                @RenderBody()
+            </div>
+
+            <div class="col-sm-2 sidenav " style="margin-top:10px">
+                <div class="panel-group panel" style="background-color:#feaeae" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel" style="background-color:#feaeae">
+                        <div style="background-color:#bd1515" class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a style="color:white" class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+                                    آموزش
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <ul class="nav nav-pills nav-stacked alert-danger ">
+                                <li role="presentation" class="">@Html.ActionLink("گروه آموزشی", "Index", "TrainingCategories", new { area = "Admin" }, null)</li>
+                                <li role="presentation" class="">@Html.ActionLink("دوره های آموزش", "Index", "TrainingCourses", new { area = "Admin" }, null)</li>
+                                <li role="presentation" class="">@Html.ActionLink("سرفصل دوره ها", "Index", "HeaderTopics", new { area = "Admin" }, null)</li>
+                                <li role="presentation" class="">@Html.ActionLink("مدرسین", "Index", "Teachers", new { area = "Admin" }, null)</li>
+                                <li role="presentation" class="">@Html.ActionLink("تقویم آموزشی", "Index", "EducationalCalendars", new { area = "Admin" }, null)</li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="panel" style="background-color:#feaeae">
+                        <div style="background-color:#bd1515" class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a style="color:white" class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+                                    محصولات
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <ul class="nav nav-pills nav-stacked alert-danger ">
+                                <li role="presentation" class="">@Html.ActionLink("انواع محصولات", "Index", "TrainingCategories", new { area = "Admin" }, null)</li>
+                                <li role="presentation" class="">@Html.ActionLink("دوره های آموزش", "Index", "DevicesModel")</li>
+                                <li role="presentation" class="">@Html.ActionLink("مدرسین", "Index", "Devices")</li>
+                                <li role="presentation" class="">@Html.ActionLink("تقویم آموزشی", "Index", "People")</li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="panel" style="background-color:#feaeae">
+                        <div style="background-color:#bd1515" class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a style="color:white" class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    عملیات
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <ul class="nav nav-pills nav-stacked alert-info ">
+                                <li role="presentation"><a href="#">Home</a></li>
+
+                                <li role="presentation"><a href="#">Profile</a></li>
+
+                                <li role="presentation"><a href="#">Messages</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel" style="background-color:#feaeae">
+                        <div class="panel-heading" style="background-color:#bd1515" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a style="color:white" class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    تنظیمات
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li role="presentation"><a href="#">Home</a></li>
+                                <li role="presentation"><a href="#">Profile</a></li>
+                                <li role="presentation"><a href="#">Messages</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
