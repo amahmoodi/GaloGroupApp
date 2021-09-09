@@ -57,6 +57,8 @@
     <Compile Include="DBModel\GaloGroupDB.cs" />
     <Compile Include="DBModel\HeaderTopic.cs" />
     <Compile Include="DBModel\ProductCategory.cs" />
+    <Compile Include="DBModel\Product.cs" />
+    <Compile Include="DBModel\Student.cs" />
     <Compile Include="DBModel\Teacher.cs" />
     <Compile Include="DBModel\TrainingCategory.cs" />
     <Compile Include="DBModel\TrainingCourse.cs" />

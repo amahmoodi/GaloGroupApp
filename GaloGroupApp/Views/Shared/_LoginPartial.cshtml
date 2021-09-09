@@ -17,7 +17,9 @@ else
 {
 <ul class="nav navbar-nav navbar-left">
     <li>@Html.ActionLink("مدیر سایت", "Index", "Default", routeValues: new { area = "Admin" }, htmlAttributes: new { id = "loginLink" })</li>
-    <li>@Html.ActionLink("ثبت نام", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+    <li>@Html.ActionLink("داشبورد مدیر", "Dashboard", "Dashboard", routeValues: new { area = "Admin" }, htmlAttributes: new { id = "DashboardLink" })</li>
+    <li>@Html.ActionLink("دانشجو", "Index", "Student", routeValues: new { area = "Student" }, htmlAttributes: new { id = "StudentLink" })</li>
+    @* <li>@Html.ActionLink("ثبت نام", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
     <li>@Html.ActionLink("ورود", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
 </ul>
 }

@@ -18,6 +18,9 @@ namespace GaloGroup.Domain.DBModel
         public virtual DbSet<TrainingCourse> TrainingCourses { get; set; }
         public virtual DbSet<ProductCategory> ProductCategories { get; set; }
         public virtual DbSet<Teacher> Teachers { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -38,6 +41,15 @@ namespace GaloGroup.Domain.DBModel
             modelBuilder.Entity<ProductCategory>()
                 .Property(e => e.ProductCategoryName)
                 .IsFixedLength();
+
+            modelBuilder.Entity<Teacher>()
+                .Property(e => e.Id);
+
+            modelBuilder.Entity<Product>()
+                .Property(e => e.Id);
+
+            modelBuilder.Entity<Student>()
+                .Property(e => e.Id);
         }
     }
 }

@@ -13,8 +13,7 @@
  
         background-image: url('../../../../Content/Pic/Inked24920_LI3.jpg');
         background-repeat: no-repeat;
-        background-size: cover
-">
+        background-size: cover ">
         @*   <div class="navbar navbar-inverse navbar-fixed-top">*@
         <div class="container">
             <div class="navbar-header navbar-left">
@@ -59,26 +58,25 @@
 
                             </ul>
                         </div>
+
                     </div>
 
                     <div class="panel" style="background-color:#feaeae">
-                        <div style="background-color:#bd1515" class="panel-heading" role="tab" id="headingTwo">
+                        <div class="panel-heading" style="background-color:#bd1515" role="tab" id="headingThree">
                             <h4 class="panel-title">
-                                <a style="color:white" class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+                                <a style="color:white" class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     محصولات
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                             <ul class="nav nav-pills nav-stacked alert-danger ">
                                 <li role="presentation" class="">@Html.ActionLink("انواع محصولات", "Index", "TrainingCategories", new { area = "Admin" }, null)</li>
-                                <li role="presentation" class="">@Html.ActionLink("دوره های آموزش", "Index", "DevicesModel")</li>
-                                <li role="presentation" class="">@Html.ActionLink("مدرسین", "Index", "Devices")</li>
-                                <li role="presentation" class="">@Html.ActionLink("تقویم آموزشی", "Index", "People")</li>
-
+                                <li role="presentation" class="">@Html.ActionLink("لیست محصولات", "Index", "Products", new { area = "Admin"} , null )</li>
                             </ul>
                         </div>
                     </div>
+
 
 
                     <div class="panel" style="background-color:#feaeae">
@@ -95,22 +93,6 @@
 
                                 <li role="presentation"><a href="#">Profile</a></li>
 
-                                <li role="presentation"><a href="#">Messages</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="panel" style="background-color:#feaeae">
-                        <div class="panel-heading" style="background-color:#bd1515" role="tab" id="headingThree">
-                            <h4 class="panel-title">
-                                <a style="color:white" class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    تنظیمات
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li role="presentation"><a href="#">Home</a></li>
-                                <li role="presentation"><a href="#">Profile</a></li>
                                 <li role="presentation"><a href="#">Messages</a></li>
                             </ul>
                         </div>
